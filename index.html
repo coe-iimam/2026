@@ -71,6 +71,15 @@
   .route-sub{
     font-family:'Inter',sans-serif; font-size:11px; fill:var(--ink-soft);
   }
+  .route-stop{cursor:pointer;}
+  .route-stop circle{
+    transition:transform 0.15s ease, opacity 0.15s ease;
+    transform-box:fill-box; transform-origin:center;
+  }
+  .route-stop:hover circle{transform:scale(1.18);}
+  .route-stop:hover .route-title{text-decoration:underline;}
+  .route-stop text{pointer-events:none;}
+  .route-hit{fill:transparent; pointer-events:auto;}
 
   .hero-meta{
     max-width:960px; margin:1.6rem auto 0; padding:0 1.5rem 2.2rem;
@@ -219,41 +228,48 @@
       </linearGradient>
     </defs>
 
-    <g>
+    <a href="#stage-0" class="route-stop" aria-label="Jump to Explorer">
+      <rect class="route-hit" x="20" y="105" width="120" height="130"/>
       <circle cx="80" cy="150" r="15" fill="#E8622C"/>
       <text x="80" y="155" text-anchor="middle" fill="#fff" class="route-label">0</text>
-      <text x="80" y="200" text-anchor="middle" fill="#262220" class="route-label">Explorer</text>
-    </g>
-    <g>
+      <text x="80" y="200" text-anchor="middle" fill="#262220" class="route-label route-title">Explorer</text>
+    </a>
+    <a href="#stage-1" class="route-stop" aria-label="Jump to Ideation">
+      <rect class="route-hit" x="240" y="45" width="120" height="130"/>
       <circle cx="300" cy="90" r="15" fill="#D9822E"/>
       <text x="300" y="95" text-anchor="middle" fill="#fff" class="route-label">1</text>
-      <text x="300" y="65" text-anchor="middle" fill="#262220" class="route-label">Ideation</text>
-    </g>
-    <g>
+      <text x="300" y="65" text-anchor="middle" fill="#262220" class="route-label route-title">Ideation</text>
+    </a>
+    <a href="#stage-2" class="route-stop" aria-label="Jump to Validation">
+      <rect class="route-hit" x="460" y="125" width="120" height="130"/>
       <circle cx="520" cy="170" r="15" fill="#3C9D6B"/>
       <text x="520" y="175" text-anchor="middle" fill="#fff" class="route-label">2</text>
-      <text x="520" y="220" text-anchor="middle" fill="#262220" class="route-label">Validation</text>
-    </g>
-    <g>
+      <text x="520" y="220" text-anchor="middle" fill="#262220" class="route-label route-title">Validation</text>
+    </a>
+    <a href="#stage-3" class="route-stop" aria-label="Jump to MVP/Build">
+      <rect class="route-hit" x="670" y="45" width="140" height="130"/>
       <circle cx="740" cy="90" r="15" fill="#1F9E9E"/>
       <text x="740" y="95" text-anchor="middle" fill="#fff" class="route-label">3</text>
-      <text x="740" y="65" text-anchor="middle" fill="#262220" class="route-label">MVP/Build</text>
-    </g>
-    <g>
+      <text x="740" y="65" text-anchor="middle" fill="#262220" class="route-label route-title">MVP/Build</text>
+    </a>
+    <a href="#stage-4" class="route-stop" aria-label="Jump to Pilot">
+      <rect class="route-hit" x="900" y="125" width="120" height="130"/>
       <circle cx="960" cy="170" r="15" fill="#2E7FBF"/>
       <text x="960" y="175" text-anchor="middle" fill="#fff" class="route-label">4</text>
-      <text x="960" y="220" text-anchor="middle" fill="#262220" class="route-label">Pilot</text>
-    </g>
-    <g>
+      <text x="960" y="220" text-anchor="middle" fill="#262220" class="route-label route-title">Pilot</text>
+    </a>
+    <a href="#stage-5" class="route-stop" aria-label="Jump to Funding-ready">
+      <rect class="route-hit" x="1120" y="45" width="120" height="130"/>
       <circle cx="1180" cy="90" r="15" fill="#5B5FC7"/>
       <text x="1180" y="95" text-anchor="middle" fill="#fff" class="route-label">5</text>
-      <text x="1180" y="65" text-anchor="middle" fill="#262220" class="route-label">Funding</text>
-    </g>
-    <g>
+      <text x="1180" y="65" text-anchor="middle" fill="#262220" class="route-label route-title">Funding</text>
+    </a>
+    <a href="#stage-6" class="route-stop" aria-label="Jump to Accelerator-ready">
+      <rect class="route-hit" x="1340" y="105" width="120" height="130"/>
       <circle cx="1400" cy="150" r="15" fill="#8B4FC9"/>
       <text x="1400" y="155" text-anchor="middle" fill="#fff" class="route-label">6</text>
-      <text x="1400" y="200" text-anchor="middle" fill="#262220" class="route-label">Scale</text>
-    </g>
+      <text x="1400" y="200" text-anchor="middle" fill="#262220" class="route-label route-title">Scale</text>
+    </a>
   </svg>
 </div>
 
@@ -481,7 +497,7 @@
   </section>
 
   <footer>
-    Compiled by the Centre of Entrepreneurship, IIM Amritsar, as a resource for founders anywhere — not limited to IIM Amritsar students. Government and funding-scheme details (Startup India, MAARG, BHASKAR, AIM/AICs, WTFund, Campus Fund, SISFS) independently verified as of July 2026. Accelerator details (YC, Surge, Techstars, Antler) reflect general program structure.
+    Compiled by the Centre of Entrepreneurship, IIM Amritsar, as a resource for founders anywhere — not limited to IIM Amritsar students. Government and funding-scheme details (Startup India, MAARG, BHASKAR, AIM/AICs, WTFund, Campus Fund, SISFS) independently verified as of July 2026 — items flagged "check dates" run in cycles and should be re-verified before relying on them. Accelerator details (YC, Surge, Techstars, Antler) reflect general program structure and should be confirmed against each program's current cycle.
   </footer>
 
 </main>
